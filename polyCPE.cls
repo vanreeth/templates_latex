@@ -26,6 +26,7 @@
 \RequirePackage{hyperref, breakurl}
 
 % Design
+\RequirePackage{etoolbox}
 \RequirePackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 \RequirePackage{xspace}
 \RequirePackage{xcolor}
@@ -50,10 +51,13 @@
 \RequirePackage[]{animate}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.8}
-\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes}
-\usepgfplotslibrary{dateplot,groupplots,polar}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes,patterns}
+\usepgfplotslibrary{dateplot,groupplots,polar,fillbetween}
+\pgfkeys{/pgf/number format/1000 sep={}}
 
 % Specific variables
+\newcommand{\cone}[1]{\textbf{\textcolor{col1}{#1}}}
+\newcommand{\ctwo}[1]{\textbf{\textcolor{col2}{#1}}}
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\logocpe}[1]{\def\@logocpe{#1}}
 \newcommand{\academicYear}[1]{\def\@academicYear{#1}}
@@ -61,6 +65,7 @@
 \newcommand{\titlei}[1]{\def\@titlei{#1}}
 \newcommand{\titleii}[1]{\def\@titleii{#1}}
 \newcommand{\titleiii}[1]{\def\@titleiii{#1}}
+\newcommand{\figprem}[1]{\def\@figprem{#1}}
 
 % Specific commands
 \newcommand{\displaylogo}[1]{\includegraphics[scale=#1]{\@logocpe}}
@@ -90,6 +95,14 @@
 \noindent\makebox[\linewidth]{\textcolor{blueCPE}{\rule{\paperwidth}{2pt}}}
 %
 \vfill
+%
+\ifx \figprem[#1] \empty
+\else
+	\begin{center}
+	\includegraphics[width=\textwidth]{\@figprem}
+	\end{center}
+	\vfill
+\fi
 %
 \begin{flushright}
 \LARGE

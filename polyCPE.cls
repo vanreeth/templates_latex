@@ -15,7 +15,9 @@
 \RequirePackage{fontawesome}
 
 % Maths
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\theoremstyle{definition}
+\newtheorem{ex}{Exemple}[section]
 \RequirePackage{bm}
 
 % Figures
@@ -30,6 +32,22 @@
 \RequirePackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 \RequirePackage{xspace}
 \RequirePackage{xcolor}
+\RequirePackage[breakable]{tcolorbox}
+\tcbset{
+	breakable,
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=0mm,
+	boxsep=5pt,
+	arc=0pt,outer arc=0pt,
+}
 \RequirePackage{placeins}
 \definecolor{col1}{HTML}{FFA630}
 \definecolor{col2}{HTML}{247696}

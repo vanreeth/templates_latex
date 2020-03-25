@@ -44,6 +44,8 @@
 \usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes}
 \usepgfplotslibrary{dateplot,groupplots,polar}
 \pgfkeys{/pgf/number format/1000 sep={}}
+\pgfkeys{/pgf/number format/fixed}
+\pgfkeys{/pgf/number format/precision=3}
 \RequirePackage{tikz}
 
 

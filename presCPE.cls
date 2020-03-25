@@ -57,7 +57,7 @@
 \usepgfplotslibrary{dateplot,groupplots,polar}
 \pgfkeys{/pgf/number format/1000 sep={}}
 \pgfkeys{/pgf/number format/fixed}
-\pgfkeys{/pgf/number format/precision=2}
+\pgfkeys{/pgf/number format/precision=3}
 
 % Specific variables
 \newcommand{\name}[1]{\def\@name{#1}}

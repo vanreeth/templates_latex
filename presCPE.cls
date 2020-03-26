@@ -60,6 +60,8 @@
 \pgfkeys{/pgf/number format/precision=3}
 
 % Specific variables
+\newcommand{\cone}[1]{\textbf{\textcolor{col1}{#1}}}
+\newcommand{\ctwo}[1]{\textbf{\textcolor{col2}{#1}}}
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\logocpe}[1]{\def\@logocpe{#1}}
 \newcommand{\academicYear}[1]{\def\@academicYear{#1}}

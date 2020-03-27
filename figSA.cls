@@ -42,7 +42,7 @@
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.8}
 \usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes}
-\usepgfplotslibrary{dateplot,groupplots,polar}
+\usepgfplotslibrary{dateplot,groupplots,polar,fillbetween}
 \pgfkeys{/pgf/number format/1000 sep={}}
 \pgfkeys{/pgf/number format/fixed}
 \pgfkeys{/pgf/number format/precision=3}

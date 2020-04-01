@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{polyCPE}[2019/09/05]
+\ProvidesClass{tdCPE}[2020/04/01]
 
 % Base class
 \LoadClass{article}
@@ -59,12 +59,12 @@
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\@level~-~\@titleiii}
+\lhead{}
 \rhead{}
-\lfoot{\@academicYear}
+\lfoot{\@titleii}
 \rfoot{\@name}
 \cfoot{\thepage}
-
+\renewcommand{\headrulewidth}{0pt}
 % Schemes
 \RequirePackage[]{animate}
 \RequirePackage{pgfplots}
@@ -79,58 +79,32 @@
 \newcommand{\cone}[1]{\textbf{\textcolor{col1}{#1}}}
 \newcommand{\ctwo}[1]{\textbf{\textcolor{col2}{#1}}}
 \newcommand{\name}[1]{\def\@name{#1}}
-\newcommand{\logocpe}[1]{\def\@logocpe{#1}}
+\newcommand{\logocpe}[2]{\def\@logocpe{#1}\def\@logocpescale{#2}}
 \newcommand{\academicYear}[1]{\def\@academicYear{#1}}
 \newcommand{\level}[1]{\def\@level{#1}}
 \newcommand{\titlei}[1]{\def\@titlei{#1}}
 \newcommand{\titleii}[1]{\def\@titleii{#1}}
 \newcommand{\titleiii}[1]{\def\@titleiii{#1}}
-\newcommand{\figprem}[2]{\def\@figprem{#1}\def\@figpremwidth{#2}}
 
 % Specific commands
-\newcommand{\displaylogo}[1]{\includegraphics[scale=#1]{\@logocpe}}
+%\newcommand{\displaylogo}[1]{\includegraphics[scale=#1]{\@logocpe}}
 %
-\newcommand{\maketitlepage}[1]{%
-\thispagestyle{empty}
-\pagenumbering{gobble}
-\displaylogo{#1}
+\newcommand{\maketitlepage}{%
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
+	 \begin{tabular}{l} \includegraphics[scale=\@logocpescale]{\@logocpe}  \end{tabular} & \begin{tabular}{r} \textcolor{blueCPE}{\textbf{\LARGE\@titlei}}  \\  \textcolor{blueCPE}{\textbf{\LARGE\@academicYear}} \end{tabular} \\
+\end{tabular*}
+%
 \vspace{1cm}
-\begin{flushright}
-\Huge
-\textbf{Année universitaire\\
-\@academicYear}
-\end{flushright}
-\vspace{1cm}
-\noindent\makebox[\linewidth]{\textcolor{blueCPE}{\rule{\paperwidth}{2pt}}}
 %
 \begin{center}
-\Huge
-\textcolor{blueCPE}{\textbf{\@titlei~$-$~\@level}}\\
-\textbf{\@titleii}\\
-\vspace{1.25cm}
-\huge
-\textbf{\@titleiii}
+	\textbf{\LARGE\@titleii}\\
+	\textbf{\LARGE\@titleiii}
 \end{center}
 %
-\noindent\makebox[\linewidth]{\textcolor{blueCPE}{\rule{\paperwidth}{2pt}}}
+\vspace{.5cm}
 %
-\vfill
-%
-\ifx \figprem[#1] \empty
-\else
-	\begin{center}
-	\includegraphics[width=\@figpremwidth\textwidth]{\@figprem}
-	\end{center}
-	\vfill
-\fi
-%
-\begin{flushright}
-\LARGE
-\textcolor{blueCPE}{\textbf{\@name}}
-\end{flushright}
-%
-\vfill
-\newpage
+\noindent\hfil\textcolor{blueCPE}{\rule{0.5\textwidth}{1pt}}\hfil
+
 \pagenumbering{arabic}
 \thispagestyle{fancy}
 }

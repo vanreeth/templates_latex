@@ -103,7 +103,7 @@
 %
 \vspace{.5cm}
 %
-\noindent\hfil\textcolor{blueCPE}{\rule{0.5\textwidth}{1pt}}\hfil
+\noindent\hfil\textcolor{blueCPE}{\rule{0.5\textwidth}{1.5pt}}\hfil
 
 \pagenumbering{arabic}
 \thispagestyle{fancy}

@@ -41,7 +41,7 @@
 	right=0pt,
 	top=0pt,
 	bottom=0pt,
-	colback=gray!20,
+	colback=gray!15,
 	colframe=white,
 	width=\dimexpr\textwidth\relax,
 	enlarge left by=0mm,

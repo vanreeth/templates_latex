@@ -45,6 +45,7 @@
 \usepgfplotslibrary{dateplot,groupplots,polar,fillbetween}
 \pgfkeys{/pgf/number format/1000 sep={}}
 \pgfkeys{/pgf/number format/fixed}
+\pgfkeys{/pgf/number format/fixed zerofill=true}
 \pgfkeys{/pgf/number format/precision=3}
 \RequirePackage{tikz}
 

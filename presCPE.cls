@@ -13,8 +13,12 @@
 % List all required packages
 % Font
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[french]{babel}
+\RequirePackage[french,english]{babel}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{amsfonts}
+\RequirePackage{fontawesome}
+\RequirePackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
 \RequirePackage{libertine}
 \RequirePackage{fontawesome}
 

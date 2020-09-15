@@ -9,10 +9,14 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[french,english]{babel}
 \RequirePackage[T1]{fontenc}
-\RequirePackage{libertine}
-\RequirePackage{listings}
-\renewcommand{\baselinestretch}{1.5}
+\RequirePackage{amsfonts}
 \RequirePackage{fontawesome}
+\RequirePackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\RequirePackage{libertine}
+\RequirePackage{fontawesome}
+\renewcommand{\baselinestretch}{1.25}
+
 
 % Maths
 \usepackage{amsmath,amsthm,amssymb,amsfonts}

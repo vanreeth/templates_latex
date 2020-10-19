@@ -38,7 +38,7 @@
 \definecolor{blueCPE}{HTML}{0087CC}
 
 % Schemes
-\RequirePackage[]{animate}
+\RequirePackage{animate}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.8}
 \usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes,patterns}

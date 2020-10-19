@@ -19,7 +19,8 @@
 
 
 % Maths
-\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\RequirePackage{amsmath,amsthm,amssymb,amsfonts}
+\RequirePackage{siunitx}
 \theoremstyle{definition}
 \newtheorem{ex}{Exemple}[section]
 \RequirePackage{bm}
@@ -33,25 +34,64 @@
 
 % Design
 \RequirePackage{etoolbox}
+\RequirePackage{minted}
+\setminted{style=vs,bgcolor=gray!10}
 \RequirePackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 \RequirePackage{xspace}
 \RequirePackage{xcolor}
-\RequirePackage[breakable]{tcolorbox}
+
+
+
+
+\RequirePackage[breakable,skins,theorems]{tcolorbox}
+
 \tcbset{
 	breakable,
-	frame code={}
-	center title,
 	left=0pt,
 	right=0pt,
-	top=0pt,
 	bottom=0pt,
-	colback=gray!15,
-	colframe=white,
 	width=\dimexpr\textwidth\relax,
 	enlarge left by=0mm,
 	boxsep=5pt,
-	arc=0pt,outer arc=0pt,
 }
+
+% local tcolorbox env
+\newtcolorbox{notations}{%
+	colback=col2!10,%
+	colframe=col2,%
+	fonttitle=\bfseries,%
+	title=Notations,%
+	top=0pt,%
+}
+
+\newtcolorbox{important}{%
+	colback=red!5,%
+	colframe=red!70!black,%
+	top=0pt,%
+}
+
+\newtcolorbox[auto counter,number within=section]{thm}[2][]{%
+	colback=white,%
+	colframe=red!75!black,%
+	colbacktitle=white,%
+	coltitle=red!75!black, 
+	top=5pt,
+	fonttitle=\bfseries,%
+	%	title=Théorème ~\thetcbcounter: #2,%
+	title=#2,%
+	enhanced,%
+	attach boxed title to top left={xshift=2mm,yshift=-3mm},%
+	#1%	
+}
+\newtcolorbox[auto counter,number within=section]{exemple}[1][]{%
+	colback=gray!15,%
+	colframe=gray!15,%
+	coltitle=black, 	
+	top=-3pt,%
+	fonttitle=\bfseries,%
+	title=Exemple ~\thetcbcounter. #1,%
+}
+
 \RequirePackage{placeins}
 \definecolor{col1}{HTML}{FFA630}
 \definecolor{col2}{HTML}{247696}

@@ -20,10 +20,10 @@
 \RequirePackage{lmodern}
 \renewcommand*\familydefault{\sfdefault}
 \RequirePackage{libertine}
-\RequirePackage{fontawesome}
 
 % Maths
 \RequirePackage{amsmath,amssymb,amsfonts,mathtools}
+\RequirePackage{siunitx}
 \RequirePackage{bm}
 \RequirePackage{empheq}
 
@@ -36,6 +36,8 @@
 
 % Design
 \RequirePackage{enumitem}
+\RequirePackage{minted}
+\setminted{style=vs,bgcolor=gray!10}
 %\RequirePackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 \RequirePackage{xspace}
 \RequirePackage{adjustbox}
@@ -48,6 +50,13 @@
 \definecolor{col5}{HTML}{21897E}
 \definecolor{col6}{HTML}{68D89B}%green
 \definecolor{blueCPE}{HTML}{0087CC}
+\definecolor{col11}{HTML}{7FFF3B}%dégradé vert
+\definecolor{col12}{HTML}{6CD932}
+\definecolor{col13}{HTML}{59B329}
+\definecolor{col14}{HTML}{468C20}
+\definecolor{col15}{HTML}{336617}
+\definecolor{col16}{HTML}{19330C}
+\definecolor{col17}{HTML}{0D1A06}
 \setbeamertemplate{footline}[text line]{%
 \parbox{\linewidth}{\vspace*{-10pt}\@name\hfill \@titleiii \hfill\insertpagenumber}}
 %\setbeamercolor{progress bar}{}

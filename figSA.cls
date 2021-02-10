@@ -8,10 +8,13 @@
 % List all required packages
 % Font
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[french]{babel}
+\RequirePackage[french,english]{babel}
 \RequirePackage[T1]{fontenc}
-\RequirePackage{libertine}
+\RequirePackage{amsfonts}
 \RequirePackage{fontawesome}
+\RequirePackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\RequirePackage{libertine}
 
 % Maths
 \usepackage{amsmath,amssymb,amsfonts}
@@ -41,11 +44,11 @@
 \RequirePackage{animate}
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.8}
-\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes,patterns}
+\usetikzlibrary{calc,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes,patterns}
 \usepgfplotslibrary{dateplot,groupplots,polar,fillbetween}
 \pgfkeys{/pgf/number format/1000 sep={}}
 \pgfkeys{/pgf/number format/fixed}
-\pgfkeys{/pgf/number format/fixed zerofill=true}
+%\pgfkeys{/pgf/number format/fixed zerofill=true}
 \pgfkeys{/pgf/number format/precision=3}
 \RequirePackage{tikz}
 

@@ -12,37 +12,39 @@
 
 % List all required packages
 % Font
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[french,english]{babel}
-\RequirePackage[T1]{fontenc}
-\RequirePackage{amsfonts}
-\RequirePackage{fontawesome}
-\RequirePackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{dsfont}
+\usepackage{fontawesome}
+\usepackage{lmodern}
 \renewcommand*\familydefault{\sfdefault}
-\RequirePackage{libertine}
+\usepackage{libertine}
 
 % Maths
-\RequirePackage{amsmath,amssymb,amsfonts,mathtools}
-\RequirePackage{siunitx}
-\RequirePackage{bm}
-\RequirePackage{empheq}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{siunitx}
+\sisetup{detect-all}
+\usepackage{bm}
+\usepackage{empheq}
 
 % Figures
-\RequirePackage{graphicx}
-\RequirePackage[compatibility=false]{caption}
-\RequirePackage{subcaption}
-\RequirePackage{enumitem}
-\RequirePackage{hyperref}
+\usepackage{graphicx}
+\usepackage[compatibility=false]{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{hyperref}
 
 % Design
-\RequirePackage{enumitem}
-\RequirePackage{minted}
+\usepackage{enumitem}
+\usepackage{minted}
 \setminted{style=vs,bgcolor=gray!10}
-%\RequirePackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
-\RequirePackage{xspace}
-\RequirePackage{adjustbox}
-\RequirePackage{xcolor}
-\RequirePackage{placeins}
+%\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{adjustbox}
+\usepackage{xcolor}
+\usepackage{placeins}
 \definecolor{col1}{HTML}{FFA630}
 \definecolor{col2}{HTML}{247696}
 \definecolor{col3}{HTML}{8C5383}
@@ -61,16 +63,89 @@
 \parbox{\linewidth}{\vspace*{-10pt}\@name\hfill \@titleiii \hfill\insertpagenumber}}
 %\setbeamercolor{progress bar}{}
 
+\usepackage[breakable,skins,theorems]{tcolorbox}
+
+\tcbset{
+	breakable,
+	left=0pt,
+	right=0pt,
+	bottom=0pt,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=0mm,
+	boxsep=5pt,
+}
+
+% local tcolorbox env
+\newtcolorbox{notations}{%
+	colback=col2!10,%
+	colframe=col2,%
+	fonttitle=\bfseries,%
+	title=Notations,%
+	top=0pt,%
+}
+
+\newtcolorbox{important}{%
+	colback=col1!30!white,%
+	colframe=col1,%
+	top=0pt,%
+}
+
+\newtcolorbox[auto counter,number within=section]{thm}[2][]{%
+	colback=col1!20!white,%
+	colframe=col1!75!black,%
+	colbacktitle=white,%
+	coltitle=col1!75!black, 
+	top=10pt,
+	fonttitle=\bfseries,%
+	%	title=Théorème ~\thetcbcounter: #2,%
+	title=#2,%
+	enhanced,%
+	attach boxed title to top left={xshift=2mm,yshift=-3mm},%
+	#1%	
+}
+
+\newtcolorbox[auto counter,number within=section]{prop}[2][]{%
+	colback=white,%
+	colframe=col2!75!black,%
+	colbacktitle=white,%
+	coltitle=col2!75!black, 
+	top=10pt,
+	fonttitle=\bfseries,%
+	%	title=Théorème ~\thetcbcounter: #2,%
+	title=#2,%
+	enhanced,%
+	attach boxed title to top left={xshift=2mm,yshift=-3mm},%
+	#1%	
+}
+
+\newtcolorbox[auto counter,number within=section]{exemple}[1][]{%
+	colback=gray!15,%
+	colframe=gray!15,%
+	coltitle=black, 	
+	top=-3pt,%
+	fonttitle=\bfseries,%
+	title=Exemple : #1,%
+}
+\newtcolorbox[auto counter,number within=section]{exercice}[1][]{%
+	colback=col2!15,%
+	colframe=col2!15,%
+	coltitle=black, 	
+	top=-3pt,%
+	fonttitle=\bfseries,%
+	title=Exercice #1,%
+}
+
 % Schemes
-\RequirePackage[]{animate}
-\RequirePackage{pgfplots}
+\usepackage[]{animate}
+\usepackage{pgfplots}
 \usetikzlibrary{patterns}
 %\pgfplotsset{compat=1.8}
-\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes}
+\usetikzlibrary{spy, calc, arrows, decorations.pathmorphing ,backgrounds ,positioning, fit, petri, shapes}
 \usepgfplotslibrary{dateplot,groupplots,polar,fillbetween}
 \pgfkeys{/pgf/number format/1000 sep={}}
 \pgfkeys{/pgf/number format/fixed}
 \pgfkeys{/pgf/number format/precision=3}
+\tikzstyle{every node}=[font=\footnotesize]
 
 % Specific variables
 \newcommand{\cone}[1]{\textbf{\textcolor{col1}{#1}}}
@@ -112,8 +187,8 @@
 %
 \begin{flushleft}
 \large
-\textcolor{blueCPE}{\textbf{\@name~(\@affiliation)}}\\
-\@address~$-$~\@email
+\textcolor{blueCPE}{\textbf{\@name~\@affiliation}}\\
+\@address~\@email
 \end{flushleft}
 %
 \vfill

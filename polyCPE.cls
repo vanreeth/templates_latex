@@ -16,7 +16,10 @@
 \RequirePackage{libertine}
 \RequirePackage{fontawesome}
 \renewcommand{\baselinestretch}{1.25}
-
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
 
 % Maths
 \RequirePackage{amsmath,amsthm,amssymb,amsfonts}

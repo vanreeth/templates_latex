@@ -21,6 +21,10 @@
 \usepackage{lmodern}
 \renewcommand*\familydefault{\sfdefault}
 \usepackage{libertine}
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
 
 % Maths
 \usepackage{amsmath,amssymb,amsfonts,mathtools}
@@ -133,6 +137,14 @@
 	top=-3pt,%
 	fonttitle=\bfseries,%
 	title=Exercice #1,%
+}
+\newtcolorbox[auto counter,number within=section]{calcul}[1][]{%
+	colback=col2!15,%
+	colframe=col2!15,%
+	coltitle=black, 	
+	top=-3pt,%
+	fonttitle=\bfseries,%
+	title=#1,%
 }
 
 % Schemes

@@ -18,6 +18,7 @@
 
 % Maths
 \usepackage{amsmath,amssymb,amsfonts}
+\usepackage{siunitx}
 \RequirePackage{bm}
 
 % Figures
@@ -34,10 +35,11 @@
 \RequirePackage{xcolor}
 \definecolor{col1}{HTML}{FFA630}
 \definecolor{col2}{HTML}{247696}
-\definecolor{col3}{HTML}{8C5383}
-\definecolor{col4}{HTML}{E94F37}
-\definecolor{col5}{HTML}{21897E}
+\definecolor{col3}{HTML}{646536}
+\definecolor{col4}{HTML}{FE4A49}
+\definecolor{col5}{HTML}{002500}
 \definecolor{col6}{HTML}{68D89B}%green
+\definecolor{col7}{HTML}{C4B7CB}
 \definecolor{blueCPE}{HTML}{0087CC}
 
 % Schemes
@@ -51,6 +53,8 @@
 %\pgfkeys{/pgf/number format/fixed zerofill=true}
 \pgfkeys{/pgf/number format/precision=3}
 \RequirePackage{tikz}
+\tikzstyle{every node}=[font=\footnotesize]
+
 
 
 

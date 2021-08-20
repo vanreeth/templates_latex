@@ -70,7 +70,7 @@
 }
 
 @Misc{fondsphoto2020,
-  title = {http://www.fondsphotographiquepoyet.fr/},
+  title = {www.fondsphotographiquepoyet.fr/},
   month = nov,
   year  = {2020},
 }
@@ -79,6 +79,13 @@
   title = {www.bioinformatics.org/oeil-couleur/dossier/lumiere.html},
   month = nov,
   year  = {2020},
+}
+
+@TechReport{,
+  author      = {D. Rohmer},
+  title       = {Cours de Snakes},
+  institution = {CPE Lyon},
+  year        = {2010},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

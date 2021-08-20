@@ -12,6 +12,10 @@
 \RequirePackage{amsfonts}
 \RequirePackage{fontawesome}
 \RequirePackage{lmodern}
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
 %\RequirePackage{pifont}
 %\RequirePackage{anyfontsize}
 %\RequirePackage{t1enc}

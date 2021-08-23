@@ -12,10 +12,6 @@
 \RequirePackage{amsfonts}
 \RequirePackage{fontawesome}
 \RequirePackage{lmodern}
-% Allow boldmaths in section titles
-\makeatletter
-\g@addto@macro\bfseries{\boldmath}
-\makeatother
 %\RequirePackage{pifont}
 %\RequirePackage{anyfontsize}
 %\RequirePackage{t1enc}
@@ -277,3 +273,8 @@
 % text color
 \newcommand{\col}		[2]{\textcolor{col#1}{#2}}%
 \newcommand{\colbf}	[2]{\textbf{\textcolor{col#1}{#2}}}
+
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother

@@ -16,10 +16,7 @@
 \RequirePackage{libertine}
 \RequirePackage{fontawesome}
 \renewcommand{\baselinestretch}{1.25}
-% Allow boldmaths in section titles
-\makeatletter
-\g@addto@macro\bfseries{\boldmath}
-\makeatother
+
 
 % Maths
 \RequirePackage{amsmath,amsthm,amssymb,amsfonts}
@@ -27,6 +24,7 @@
 \theoremstyle{definition}
 \newtheorem{ex}{Exemple}[section]
 \RequirePackage{bm}
+
 
 % Figures
 \RequirePackage{graphicx}
@@ -183,4 +181,7 @@
 }
 
 
-
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother

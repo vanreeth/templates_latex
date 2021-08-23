@@ -68,4 +68,7 @@
 
 
 
-
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother

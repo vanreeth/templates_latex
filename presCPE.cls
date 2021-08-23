@@ -21,10 +21,7 @@
 \usepackage{lmodern}
 \renewcommand*\familydefault{\sfdefault}
 \usepackage{libertine}
-% Allow boldmaths in section titles
-\makeatletter
-\g@addto@macro\bfseries{\boldmath}
-\makeatother
+
 
 % Maths
 \usepackage{amsmath,amssymb,amsfonts,mathtools}
@@ -211,3 +208,7 @@
 
 
 
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother

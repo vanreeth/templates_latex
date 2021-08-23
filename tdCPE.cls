@@ -13,10 +13,7 @@
 \RequirePackage{listings}
 \renewcommand{\baselinestretch}{1.5}
 \RequirePackage{fontawesome}
-% Allow boldmaths in section titles
-\makeatletter
-\g@addto@macro\bfseries{\boldmath}
-\makeatother
+
 
 % Maths
 \usepackage{amsmath,amsthm,amssymb,amsfonts,mathtools}
@@ -115,3 +112,7 @@
 
 
 
+% Allow boldmaths in section titles
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother

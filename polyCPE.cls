@@ -36,7 +36,7 @@
 % Design
 \RequirePackage{etoolbox}
 \RequirePackage{minted}
-\setminted{style=vs,bgcolor=gray!10}
+\setminted{style=vs,bgcolor=gray!10,tabsize=3,breaklines}
 \RequirePackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 \RequirePackage{xspace}
 \RequirePackage{xcolor}

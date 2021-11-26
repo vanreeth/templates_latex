@@ -149,7 +149,7 @@
 \usepackage{pgfplots}
 \usetikzlibrary{patterns}
 %\pgfplotsset{compat=1.8}
-\usetikzlibrary{spy, calc, arrows, decorations.pathmorphing ,backgrounds ,positioning, fit, petri, shapes}
+\usetikzlibrary{spy, calc, math, arrows, decorations.pathmorphing ,backgrounds ,positioning, fit, petri, shapes}
 \usepgfplotslibrary{dateplot,groupplots,polar,fillbetween}
 \pgfkeys{/pgf/number format/1000 sep={}}
 \pgfkeys{/pgf/number format/fixed}

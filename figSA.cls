@@ -47,7 +47,7 @@
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.8}
 \usetikzlibrary{calc,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri,shapes,patterns}
-\usepgfplotslibrary{dateplot,groupplots,polar,fillbetween}
+\usepgfplotslibrary{dateplot,groupplots,polar,fillbetween,patchplots}
 \pgfkeys{/pgf/number format/1000 sep={}}
 \pgfkeys{/pgf/number format/fixed}
 %\pgfkeys{/pgf/number format/fixed zerofill=true}

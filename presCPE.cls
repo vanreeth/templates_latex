@@ -29,6 +29,8 @@
 \sisetup{detect-all}
 \usepackage{bm}
 \usepackage{empheq}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 % Figures
 \usepackage{graphicx}

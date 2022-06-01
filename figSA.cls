@@ -19,6 +19,7 @@
 % Maths
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{siunitx}
+\usepackage{pythontex}
 \RequirePackage{bm}
 
 % Figures
